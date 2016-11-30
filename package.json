@@ -1,10 +1,10 @@
 {
   "name": "lamassu-btcchina",
-  "version": "0.0.1",
-  "description": "BTC China ticker and trader for lamassu-server",
-  "main": "lib/index.js",
+  "version": "0.1.1",
+  "description": "BTCChina ticker and trader for lamassu-server",
+  "main": "index.js",
   "scripts": {
-    "test": "tap ./test"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,17 +15,21 @@
     "BTCChina",
     "Bitcoin"
   ],
-  "author": "BTC China",
+  "author": "BTCChina",
   "license": "unlicense",
   "bugs": {
     "url": "https://github.com/BTCChina/lamassu-btcchina/issues"
   },
+  "bin": {
+    "btcchina-setup": "./setup"
+  },
   "dependencies": {
-    "btcchina": "git://github.com/BTCChina/btcchina-api-js",
     "async": "~0.8.0",
-    "jsonquest": "git://github.com/lamassu/jsonquest"    
+    "lamassu-config": "^0.4.4",
+    "lodash": "^2.4.1",
+    "promptly": "~0.2.0",
+    "wreck": "^10.0.0"
   },
   "devDependencies": {
-    "tap": "~0.4.8"
   }
 }
